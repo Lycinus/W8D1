@@ -1,5 +1,16 @@
-<div id="root">
-</div>
+<html>
+
+<% if logged_in? %>
+  <script type="text/javascript">
+    window.currentUser = <%= render(
+      "api/users/user.json.jbuilder",
+      user: current_user
+    ).html_safe %></script>
+<% end %>
 
 
-/Users/appacademy/Desktop/BenchBnB/app/views/static_pages/root.html.erb
+    <div id="root">
+    </div>
+</html>
+
+

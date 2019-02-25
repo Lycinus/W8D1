@@ -6,9 +6,7 @@ export const sessionErrorsReducer = (oldState={}, action) => {
         case RECEIVE_SESSION_ERRORS:
             return merge({}, oldState, {errors: action.errors})
         case RECEIVE_CURRENT_USER:
-            let newState = merge({}, oldState);
-            delete newState[errors]
-            return newState
+            return []
         default:
             return oldState;
     }
